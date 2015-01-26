@@ -37,6 +37,7 @@ class Program
        objm.display();
     }
 }
+/** note:private cunstructor can not be inherited**/
 /*output:
 Cunstructor in A                                                              
 Cunstructor in A                                                              
