@@ -47,11 +47,12 @@ class Program
     }
 }
 /*output:
+Parameterized cunstructor in A                                                
 Cunstructor in A                                                              
-Cunstructor in A                                                              
-Cunstructor in B                                                              
+Parameterized cunstructor in B                                                
 display in A                                                                  
 display in B                                                                  
 Cunstructor in A                                                              
-Cunstructor in B                                                              
-display in B*/ 
+Parameterized cunstructor in B                                                
+display in B            
+*/
