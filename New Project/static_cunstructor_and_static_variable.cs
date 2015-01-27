@@ -60,3 +60,9 @@ class Program
        
     }
 }
+/* Output:
+static cunstructor
+default cunstructor
+default cunstructor
+3
+False*/
