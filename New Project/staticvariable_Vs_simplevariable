@@ -1,0 +1,55 @@
+Finally i understand the static variable.....static variable shared the value of it among all instances of the class.
+
+Example without declaring it static
+
+public  class Variable
+{
+    public int i = 5;
+    public void test()
+    {
+        i=i+5;
+        Console.WriteLine(i);
+    }
+}
+
+
+public class Exercise
+{
+    static void Main()
+    {
+        Variable var = new Variable();
+        var.test();
+        Variable var1 = new Variable();
+        var1.test();
+        Console.ReadKey();
+    }
+}
+Explanation:If you look at the above example i just declare int variable.when i run this code the output will be 10 and 10.Its simple
+
+Now Lets Look at the static variable Here,I am declaring the variable as a static.
+
+Example with static variable
+
+public  class Variable
+{
+    public static int i = 5;
+    public void test()
+    {
+        i=i+5;
+        Console.WriteLine(i);
+    }
+}
+
+
+public class Exercise
+{
+    static void Main()
+    {
+        Variable var = new Variable();
+        var.test();
+        Variable var1 = new Variable();
+        var1.test();
+        Console.ReadKey();
+    }
+}
+Now when i run above code then the output will be 10 and 15.so static variable value shared among all instances of that class.
