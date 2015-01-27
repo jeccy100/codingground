@@ -60,6 +60,8 @@ class Program
        
     }
 }
+
+/*Note:static cunstructor will be called only once in a program,when instance of class created.
 /* Output:
 static cunstructor
 default cunstructor
