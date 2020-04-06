@@ -1,0 +1,28 @@
+ using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
+            {
+                Document document = new Document(PageSize.A4, 20, 20, 20, 20);
+
+                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                document.Open();
+
+                PdfPTable table = new PdfPTable(2);
+                table.DefaultCell.Border = Rectangle.NO_BORDER;
+                table.AddCell("Row 1, Col 1");
+                table.AddCell("Row 1, Col 2");
+               
+
+                table.AddCell("Row 2, Col 1");
+                table.AddCell("Row 2, Col 2");
+               
+
+                table.AddCell("Row 3, Col 1");
+                table.AddCell("Row 3, Col 2");
+
+                document.Add(table);
+                document.Close();
+                byte[] bytes = memoryStream.ToArray();
+                ByteArrayContent byts = new ByteArrayContent(bytes);
+                MultipartFormDataContent content = new MultipartFormDataContent();
+                content.Add(byts, "file", "test");
+   	memoryStream.Close();
+}
